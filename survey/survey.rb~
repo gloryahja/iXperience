@@ -1,0 +1,11 @@
+puts "Hello!"
+
+name = "Gloryah"
+
+"Welcome #{name}"
+
+age = 20
+
+"You're #{age} years old!"
+
+"Goodbye"
