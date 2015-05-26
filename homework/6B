@@ -1,0 +1,28 @@
+E1
+1. HTTP is the protocol for making the request
+	request = you sending or getting information
+	www.facebook.com --> request for the contents of FB page
+
+2. www.facebook.com is making the request
+
+3. Request goes to the web server (ex. amazon.com)
+
+4. when it gets to the web server, the web server sends a response giving access to that page
+
+5. What comes back? Web server sends code to the client and the 
+
+6.client reads the code displays that code
+
+
+E2
+1. Error 404 message
+
+2. it means that the webpage you were trying to reach could not be found on the web server
+	SERVER = where the web pages are stored and served to those who request them
+
+3. #404
+	first 4 - a client error (CLIENT = things that view the web (ie. Google Chrome, Firefox, Internet Explorer))
+	04 - certain specific error encountered
+
+4. Ruby does not rock
+
