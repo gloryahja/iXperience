@@ -1,0 +1,2 @@
+module IxStudentsHelper
+end
