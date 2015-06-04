@@ -1,0 +1,19 @@
+<p>
+	<strong>Recipe Name:</strong>
+	<%= @recipe.name %>
+</p>
+
+<p>
+	<strong>Description:</strong>
+	<%= @recipe.description %>
+</p>
+
+<p>
+	<strong>Instructions:</strong>
+	<%= @recipe.instructions %>
+</p>
+
+<!-- link_to Back to All Recipes, Edit Recipe, Delete Recipe
+ -->
+ <%= link_to "Back to All Recipes", recipes_path %><br><br>
+<%= link_to "Edit Recipe", edit_recipe_path(@recipe) %>

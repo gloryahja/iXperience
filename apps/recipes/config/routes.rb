@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :recipes
-  get 'welcome/index'
+  get 'recipes/index'
 
   #devise_for :users do
     #root "welcome#index"
@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   devise_for :users
 devise_scope :user do
   authenticated :user do
-    root :to => 'welcome#index', as: :authenticated_root
+    root :to => 'recipes#index', as: :authenticated_root
   end
   unauthenticated :user do
     root :to => 'devise/sessions#new', as: :unauthenticated_root
