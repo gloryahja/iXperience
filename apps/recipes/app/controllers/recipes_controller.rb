@@ -13,7 +13,7 @@ class RecipesController < ApplicationController
 
 	def update
 		@recipe = Recipe.find(params[:id])
-		if @recipe.update(article_params)
+		if @recipe.update(recipe_params)
 			redirect_to @recipe
 		else
 			render 'edit'
@@ -36,6 +36,13 @@ class RecipesController < ApplicationController
 	def show
 		#how is the id created? Rails Magic?
 		@recipe = Recipe.find(params[:id])
+	end
+
+	def destroy
+		@recipe = Recipe.find(params[:id])
+		@recipe.destroy
+
+		redirect_to recipes_path
 	end
 
 	private 

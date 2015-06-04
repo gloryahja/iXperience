@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :recipes
+  resources :recipes do 
+    resources :ingredients
+  end
   get 'recipes/index'
 
   #devise_for :users do
