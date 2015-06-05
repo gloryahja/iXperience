@@ -1,7 +1,5 @@
 <p> 
 	<%= ingredient.quantity %>
 	<%= ingredient.name %>
-</p>
-
-<p>
 	<%= link_to "Remove", [ingredient.recipe, ingredient], method: :delete, data: {confirm: "Are you sure you want to delete this deliciousness?"} %>
+</p>

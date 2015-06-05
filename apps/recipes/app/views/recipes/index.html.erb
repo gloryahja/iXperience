@@ -1,5 +1,12 @@
 <h1>Recipes for the Bru</h1>
-<%= link_to "New Recipe", new_recipe_path %> <br>
+<!-- Single button -->
+<link href='http://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+
+ <div>
+  <button type="button" class="btn btn-fairy btn-lg">
+    <%= link_to "New Recipe", new_recipe_path %>
+  </button>
+</div>
 
 <h2> Here is a list of all of your recipes!</h2>
 
@@ -7,13 +14,17 @@
   <tr>
     <th>What would you like to cook today?</th>
   </tr>
- 
+
+  <div class = "list">
+  <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
   <% @recipes.each do |recipe| %>
     <tr>
      <td><br><%= link_to "#{recipe.name}", recipe_path(recipe) %><br><br></td>
      </td>
     </tr>
   <% end %>
+</div>
+
 </table>
 
 

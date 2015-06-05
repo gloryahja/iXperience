@@ -1,27 +1,55 @@
+<div class = "recipe">
+	<link href='http://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
+<div id="wrapper">
+
+<!-- #simple toggle menu done fucked me up -->
+
 <p>
 	<strong>Recipe Name:</strong>
-	<%= @recipe.name %>
 </p>
+<div class = "description">
+	<p>
+		<%= @recipe.name %>
+	</p>
+</div>
+<br>
 
 <p>
 	<strong>Description:</strong>
-	<%= @recipe.description %>
 </p>
-
+<div class = "description">
+	<p>
+		<%= @recipe.description %>
+	</p>
+</div>
+<br>
 <p>
 	<strong>Instructions:</strong>
-	<%= @recipe.instructions %>
 </p>
+<div class = "description">
+	<p>
+		<%= @recipe.instructions %>
+	</p>
+</div>
 
-<h2>Ingredients:</h2>
+<!-- <div class = "header">
+	<h2> -->
+<br>
+		<strong>Ingredients:</strong>
+	</h2>
+<!-- </div> -->
 <%= render @recipe.ingredients %>
 
 
-<h2> Add an Ingredient: </h2>
+<strong>
+	<h2> Add an Ingredient: </h2>
+</strong>
 <%= render 'ingredients/form' %>
 
 <!-- link_to Back to All Recipes, Edit Recipe, Delete Recipe
  -->
  <%= link_to "Back to All Recipes", recipes_path %><br><br>
 <%= link_to "Edit Recipe", edit_recipe_path(@recipe) %><br><br>
-<%= link_to "Delete Recipe", recipe_path(@recipe), method: :delete, data: {confirm: "Are you sure you want to delete this deliciousness?"} %>
+<%= link_to "Delete Recipe", recipe_path(@recipe), method: :delete, data: {confirm: "Are you sure you want to delete this deliciousness?"} %> 
+</div>

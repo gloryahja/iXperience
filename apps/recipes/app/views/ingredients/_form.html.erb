@@ -1,11 +1,15 @@
 <%= form_for ([@recipe, @recipe.ingredients.build]) do |f| %>
 <p> 
 	<%= f.label :quantity %>
+</p>
+<p>
 	<%= f.text_area :quantity %>
 </p>
 
 <p>
 	<%= f.label :name %>
+</p>
+<p>
 	<%= f.text_field :name %>
 </p>
 
