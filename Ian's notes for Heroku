@@ -1,0 +1,51 @@
+Creating a new rails app with postgresql instead of sqlite3
+
+run:
+
+$ rails new appname -d postgresql
+
+once it's done run:
+
+$ rake db:create
+
+this is a command that gets run by default with sqlite3, but we have to run it manually wihen using postgresql
+
+now git init, add all, and commit
+
+once you've done that run:
+
+$ heroku create appname
+
+where appname must be unique, so you might have to try a few before you find one that hasn't been used before
+
+then check your remote to see if it's properly in your git
+
+$ git remote -v
+
+you should see two entries, one for fetch and one for push, we will use push
+
+run:
+
+$ git push heroku master
+
+once this is done you'll see some WARNINGS, one asks you to add rails_12factor gem to your gem file, do this and bundle, while you're in there set your ruby version. To check your ruby version run:
+
+$ ruby -v
+
+You'll get something like this:
+
+ruby 2.2.1p85 ...
+
+this means you are using ruby 2.2.1 so in your Gem file at the top type in:
+
+ruby '2.2.1'
+
+save and bundle then run git push heroku master again and once that is done run:
+
+$ heroku run rake db:migrate
+
+once that finishes run:
+
+$ heroku open
+
+this will open your heroku hosted website in the browser, it should work fine
