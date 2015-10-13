@@ -42,7 +42,7 @@ ruby '2.2.1'
 
 save and bundle then run git push heroku master again and once that is done run:
 
-$ heroku run rake db:migrate**** try this once Han adds me as a collaborator********
+$ heroku run rake db:migrate
 
 once that finishes run:
 
